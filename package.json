@@ -4,9 +4,9 @@
   "description": "This project is a to-do API, created using Node, Express and Typescript, for Pawan code test.",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/app.js",
+    "start": "node dist/server.js",
     "build": "tsc",
-    "dev": "nodemon --watch src --exec npx ts-node src/app.ts -e ts",
+    "dev": "nodemon --watch src --exec npx ts-node src/server.ts -e ts",
     "test": "jest"
   },
   "repository": {
@@ -21,11 +21,18 @@
   },
   "homepage": "https://github.com/lucasizar/pawan-node-api#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mssql": "^8.0.2"
   },
   "devDependencies": {
+    "@types/body-parser": "^1.19.2",
+    "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/jest": "^27.4.1",
+    "@types/mssql": "^7.1.5",
     "@types/supertest": "^2.0.11",
     "jest": "^27.5.1",
     "nodemon": "^2.0.15",

@@ -1,10 +1,6 @@
-import express from "express"
+import config from './config/config'
+import server from './app'
 
-const server = express()
+const PORT : number = +config.server.port
 
-server.get("/", (req, res) => {
-  return res.send("Hello World!")
-
-})
-
-export default server
+server.listen(PORT, () => console.log(`listening at port ${PORT}`))
